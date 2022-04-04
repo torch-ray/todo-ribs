@@ -20,6 +20,9 @@
 		4CC0AC0027E824CC00AC7055 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0ABFC27E824CC00AC7055 /* RootBuilder.swift */; };
 		4CC0AC0127E824CC00AC7055 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0ABFD27E824CC00AC7055 /* RootInteractor.swift */; };
 		4CC0AC0327E8255400AC7055 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC0AC0227E8255400AC7055 /* AppComponent.swift */; };
+		CC450FC327FA99D000228B66 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450FC027FA99D000228B66 /* MainRouter.swift */; };
+		CC450FC427FA99D000228B66 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450FC127FA99D000228B66 /* MainBuilder.swift */; };
+		CC450FC527FA99D000228B66 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450FC227FA99D000228B66 /* MainInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		4CC0ABFC27E824CC00AC7055 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
 		4CC0ABFD27E824CC00AC7055 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		4CC0AC0227E8255400AC7055 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		CC450FC027FA99D000228B66 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		CC450FC127FA99D000228B66 /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		CC450FC227FA99D000228B66 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				4CC0ABF927E824BF00AC7055 /* Root */,
+				CC450FBF27FA99C100228B66 /* Main */,
 				4C91536B27DEEC2A003A7C1D /* AppDelegate.swift */,
 				4C91536D27DEEC2A003A7C1D /* SceneDelegate.swift */,
 				4C91537427DEEC2B003A7C1D /* Assets.xcassets */,
@@ -144,6 +151,16 @@
 				4CC0ABFD27E824CC00AC7055 /* RootInteractor.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		CC450FBF27FA99C100228B66 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CC450FC027FA99D000228B66 /* MainRouter.swift */,
+				CC450FC127FA99D000228B66 /* MainBuilder.swift */,
+				CC450FC227FA99D000228B66 /* MainInteractor.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,9 +300,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC0AC0127E824CC00AC7055 /* RootInteractor.swift in Sources */,
+				CC450FC327FA99D000228B66 /* MainRouter.swift in Sources */,
 				4C91536C27DEEC2A003A7C1D /* AppDelegate.swift in Sources */,
+				CC450FC527FA99D000228B66 /* MainInteractor.swift in Sources */,
 				4CC0AC0327E8255400AC7055 /* AppComponent.swift in Sources */,
 				4CC0ABFE27E824CC00AC7055 /* RootRouter.swift in Sources */,
+				CC450FC427FA99D000228B66 /* MainBuilder.swift in Sources */,
 				4CC0AC0027E824CC00AC7055 /* RootBuilder.swift in Sources */,
 				4CC0ABFF27E824CC00AC7055 /* RootViewController.swift in Sources */,
 				4C91536E27DEEC2A003A7C1D /* SceneDelegate.swift in Sources */,
