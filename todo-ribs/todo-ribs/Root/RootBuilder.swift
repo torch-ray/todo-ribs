@@ -12,14 +12,7 @@ protocol RootDependency: Dependency {
     // created by this RIB.
 }
 
-final class RootComponent: Component<RootDependency>, MainDependency {
-    var mainViewController: ViewControllable
-
-    init(mainViewController: ViewControllable, dependency: RootDependency) {
-        self.mainViewController = mainViewController
-        super.init(dependency: dependency)
-    }
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+final class RootComponent: Component<RootDependency>, TodoDependency, ProgressDependency, DoneDependency {
 }
 
 // MARK: - Builder
@@ -35,14 +28,18 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
     }
 
     func build() -> LaunchRouting {
-        let viewController = RootViewController()
-        let component = RootComponent(mainViewController: viewController, dependency: dependency)
+        let component = RootComponent(dependency: dependency)
+        let viewController = RootTabBarController()
         let interactor = RootInteractor(presenter: viewController)
-        let mainBuilder = MainBuilder(dependency: component)
+        
+        let todoBuilder = TodoBuilder(dependency: component)
+        let progressBuilder = ProgressBuilder(dependency: component)
+        let doneBuilder = DoneBuilder(dependency: component)
+        
         return RootRouter(interactor: interactor,
                           viewController: viewController,
-                          mainBuildable: mainBuilder)
+                          todoBuildable: todoBuilder,
+                          progressBuildable: progressBuilder,
+                          doneBuildable: doneBuilder)
     }
 }
-
-// Root에서 Listener가 필요없는 이유?
