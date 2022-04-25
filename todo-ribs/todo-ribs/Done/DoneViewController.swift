@@ -18,4 +18,19 @@ protocol DonePresentableListener: AnyObject {
 final class DoneViewController: UIViewController, DonePresentable, DoneViewControllable {
 
     weak var listener: DonePresentableListener?
+
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        setupViews()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupViews()
+    }
+
+    private func setupViews() {
+        tabBarItem.title = "Done"
+        tabBarItem.image = UIImage(systemName: "house")
+    }
 }

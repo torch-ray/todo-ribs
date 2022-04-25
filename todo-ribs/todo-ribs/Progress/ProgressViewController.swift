@@ -18,4 +18,19 @@ protocol ProgressPresentableListener: AnyObject {
 final class ProgressViewController: UIViewController, ProgressPresentable, ProgressViewControllable {
 
     weak var listener: ProgressPresentableListener?
+
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        setupViews()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupViews()
+    }
+
+    private func setupViews() {
+        tabBarItem.title = "Progress"
+        tabBarItem.image = UIImage(systemName: "pencil")
+    }
 }
